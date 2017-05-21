@@ -50,8 +50,8 @@ $messenger = array(
 // Config for DB. ;)
 $dragonDB = array(
               'server'		=> "127.0.0.1",
-              'username'	=> "dragondb",
-              'database'	=> "dragondb",
+              'username'	=> "doormatic",
+              'database'	=> "doormatic",
               'password'	=> "database_password",
               'table_preffix'	=> "",
               'dbType'		=> "mysql",
