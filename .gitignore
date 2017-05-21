@@ -1,0 +1,4 @@
+door/config/config.php
+.htpasswd
+*~
+*.phps
