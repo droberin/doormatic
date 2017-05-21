@@ -1,0 +1,301 @@
+
+
+
+#Content{
+  
+
+position:relative;
+max-width:960px;
+
+margin-right:auto;
+margin-left:auto;
+/* padding:10px; */
+	background: #fafafa;
+	-moz-box-shadow: 0px 0px 10px #cbcbcb;
+	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
+
+}
+
+#logoBar{
+
+padding-left:30px;
+padding-right:30px;
+padding-top:10px;
+}
+
+#logoBar li, #logoBar li div{
+display:table-cell;
+
+
+}
+
+#logo{
+width:100px;
+height:100px;
+background: url(../img/logo.jpg);
+display:table-cell;
+
+}
+
+#smallLogo{
+width:50px;
+height:50px;
+background: url(../img/small_logo.jpg);
+display:table-cell;
+
+}
+
+
+
+
+
+.mainMenuElement{
+
+padding:15px;
+
+background:gray;
+display:inline-block;
+width:240px;
+height:150px;
+
+
+}
+#secondaryMenu{
+/* background:red; */
+padding:2px;
+border-bottom:1px solid silver;
+padding-left:20px;
+padding-right:20px;
+}
+
+#secondaryMenu li{
+
+
+
+display:inline;
+font-weight:bold;
+font-size:12px;
+padding-left:10px;
+
+}
+
+#mainContent{
+min-height:100px;
+margin-top:30px;
+padding-left:20px;
+padding-right:20px;
+}
+
+#mainContent #titulo{
+font-size:22px;
+}
+#mainContent #titulo span{
+  font-size:20px;
+
+font-style: italic;
+font-weight:normal
+}
+
+#code{
+font-size:12px;
+position:relative;
+top:-5px;
+color:black;
+}
+
+#codeNumber{
+font-size:12px;
+position:relative;
+top:-5px;
+color:red;
+font-weight:bold;
+}
+
+.postImg{
+  float:right;
+
+position:relative;
+right:-20px;
+/* top:-15px; */
+margin-left:5px;
+-webkit-transform: rotate(5deg);
+-moz-transform: rotate(5deg);
+padding:5px;
+background:#FAEAD2;
+	-moz-box-shadow: 10px 12px 10px grey;
+	-webkit-box-shadow: 10px 12px 10px grey;
+}
+
+.postImg img{
+width:240px;
+}
+
+.attachImg{
+  float:center;
+
+right:-20px;
+margin-top:8px;
+margin-left:5px;
+-webkit-transform: rotate(-3deg);
+-moz-transform: rotate(-3deg);
+padding:5px;
+background:#FAEAD2;
+	-moz-box-shadow: 10px 12px 10px grey;
+	-webkit-box-shadow: 10px 12px 10px #cbcbcb;
+
+}
+
+.attachImg img{
+width:240px;
+}
+
+#bottomHr{
+margin-top:20px;
+}
+
+
+#conversation{
+padding:10px;
+backgrond:grey;
+	-moz-box-shadow: 5px 5px 15px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+margin-bottom: 5px;
+}
+
+#loginForm{
+padding:10px;
+backgrond:grey;
+	-moz-box-shadow: 5px 5px 15px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+margin-bottom: 5px;
+}
+
+#loginRequest{
+padding:10px;
+backgrond:grey;
+	-moz-box-shadow: 5px 5px 15px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+margin-bottom: 5px;
+}
+
+#optionBox{
+
+float:center;
+right:-20px;
+margin-top:0px;
+margin-left:8px;
+margin-right:8px;
+padding:8px;
+max-width: 634px;
+background:#c0c0ca;
+	-moz-box-shadow: 0px 0px 10px black;
+        -webkit-box-shadow: 0px 0px 10px black;
+}
+
+#ptitle {
+background:#d9d9ca;
+border-style:solid;
+border-color:grey;
+text-align:center;
+}
+
+#location{
+
+float:center;
+right:-20px;
+margin-top:0px;
+margin-left:8px;
+margin-right:8px;
+padding:8px;
+max-width: 634px;
+background:#d0d0ca;
+	-moz-box-shadow: 0px 0px 10px black;
+        -webkit-box-shadow: 0px 0px 10px black;
+}
+
+
+#footer{
+padding-bottom:10px;
+font-size:10px;
+
+line-height:150%
+
+}
+/*.qrSetter{
+	position:absolute;
+	width:44px;
+	height:44px;
+	border:10px solid black;
+	background:white;
+
+}
+
+.qrSetter div{
+margin:10px;
+ width:24px;
+height:24px;
+background:black;
+}*/
+
+
+@media only screen and (max-width: 999px) {
+  /* rules that only apply for canvases narrower than 1000px */
+
+}
+
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+  /* rules for iPad in landscape orientation */
+
+
+}
+
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* iPhone, Android rules here */
+	  .mainMenuElement{
+
+	  width:250px;
+	  margin-bottom:5px;
+	  height:100px;
+
+	  }
+
+
+	  .postImg img{
+		width:100px;
+
+	  }
+
+	  #mainContent,#secondaryMenu,#logoBar{
+
+	  padding-left:10px;
+	  padding-right:10px;
+	  }
+
+
+
+
+}
+
+
+@media only screen  and (min-device-width: 321px) and (max-width: 999px)  and (orientation: landscape) {
+  /* iPhone, Android horizontal rules here */
+	  .mainMenuElement{
+
+	  width:450px;
+	  margin-bottom:5px;
+	  height:100px;
+
+	  }
+
+	  .postImg img{
+		width:140px;
+
+	  }
+
+}
+
+
+

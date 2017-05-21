@@ -1,0 +1,72 @@
+<?php
+
+// Set to "true" if you want to debug. If not LET IT BE false!!!
+$debug = false;
+
+// It wont open the door even on proper authentication if $testing is set to true.
+$testing = false;
+//$testing = true;
+
+// you MUST configure your speaker if you want to get aoustic info.
+// Even if you just want it for FAILED attemps
+$speaker = array(
+  'active' => false,
+  'binary' => "/usr/bin/beep",
+  'baseDir' => "/var/local/door",
+  'openScript' => "bin/speaker/openDoor.sh",
+  'closeScript' => "bin/speaker/closeDoor.sh",
+  'failScript' => "bin/speaker/failDoor.sh",
+);
+
+// if your server doesn't have a speaker... set this to false!!!
+$speaker['activeOnFail'] = false;
+
+
+// Very Restrictive level??
+// This should require that DEVICE and username belong to the same person.
+$veryRestrictiveAccess = false;	// TODO: log it properly... Valid User but NOT OWN DEVICE!
+
+
+// Preferible NO https... :/
+$revocationServer = "http://lock.security.myclub.com:8080/";
+
+// Email address for registering requests
+$dragonName = "Dragons-Door-SysAdm"; // Avoid spaces for better results, my dear ;) Example: Dragons-Door-SysAdm
+$dragonEmail = "drober+dragonsdoor@gmail.com"; // Example: youraccount+dragonsdoor@gmail.com
+$dragonSender = "sysadmin@matrix.cyberdyne.es";	// Email FROM header. Example: gatekeeper@dragons-spirit.com (No password required) Watch out SPF configuration to avoid false positive spam
+
+// Debugger XMPP address
+$debugger = "receiver@debugger.es";
+
+// Messenger is an arrayConfiguration
+$messenger = array(
+              'server'	=> "SERVER_IP",
+              'user'	=> "butler",
+              'domain'	=> "domain.es",
+              'pass'	=> "butler_pass",
+              'to'	=> $debugger,
+);
+
+// Config for DB. ;)
+$dragonDB = array(
+              'server'		=> "127.0.0.1",
+              'username'	=> "dragondb",
+              'database'	=> "dragondb",
+              'password'	=> "database_password",
+              'table_preffix'	=> "",
+              'dbType'		=> "mysql",
+);
+
+$doorHardware = array(
+    "binary"		=> "/var/local/door/bin/openDoor.py",
+    "binary_path"	=> "/var/local/door/bin",
+    "binary_name"	=> "openDoor.py",
+    "wait_before_close"	=> "4",
+    "paramsOn"		=> "",
+    "paramsOff"		=> "",
+);
+$doorHardware['binary'] = $doorHardware['binary_path'] . "/" . $doorHardware['binary_name'];
+
+// PATH to some binaries
+$arpbin = "/usr/sbin/arp";
+$awkbin = "/usr/bin/awk";

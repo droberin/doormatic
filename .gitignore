@@ -1,4 +1,5 @@
 door/config/config.php
+door/config/email.inc.php
 .htpasswd
 *~
 *.phps

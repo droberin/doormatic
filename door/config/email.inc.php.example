@@ -1,0 +1,10 @@
+<?php
+$emailAccount = array(
+  'username' => "youremailaddress@gmail.com",
+  'password' => "yourpassword",
+  'fromMessage' => "Dragon's Automatic System",
+  'reply-to' => "you_personal_address@gmail.com",
+  'sheet' => array(
+    'revocation' => "/var/local/door/config/sheet/revocation.html",
+  )
+);

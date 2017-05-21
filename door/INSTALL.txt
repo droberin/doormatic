@@ -1,0 +1,9 @@
+·Copy folder named "door" to /var/local
+·Set a restricted access up for /var/local/door/public_html/admin folder in
+your web service.
+·Create an administrator user for that folder. This will be the one who
+creates users.
+·Import MySQL database.
+·Create MySQL user.
+·Configure /var/local/door/config/config.php Just the DB settings would be
+enough in many systems.

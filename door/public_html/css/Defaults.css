@@ -1,0 +1,97 @@
+/*  Color1  background:#f4f4f4 */
+/*  Color2  Main1:#262626 */
+/*  Color3  Main2:##3A4B64 */
+
+/*  Color10  Separator:#A4A4A4 */
+/*  Color11  Dark background:#B1BFD4 */
+/*  Color12  light background:#D4DFEF */
+
+html{
+/* min-width:960px; */
+
+
+}
+
+body{
+
+
+
+  margin:10px;
+  padding:0px;
+  color: #262626; /* Color2*/
+  background: #f4f4f4; /* Color1*/
+  font: normal 14px/18px Verdana, sans-serif;
+  background: transparent url(img/dragon.jpg) center top no-repeat;
+}
+h6{
+  font-size:10px;
+  
+}
+
+hr {
+  border:none;
+  border-top: 1px solid #A4A4A4; /* Color10 */
+  height: 1px; line-height: 1px;
+  background: white;
+  width:95%;
+
+}
+
+.table{
+
+  border:solid 1px #A4A4A4;  /* Color10 */
+  border-spacing: 0px;
+}
+
+.tr{
+  background-color:#D4DFEF; /* Color12*/
+}
+
+.tr.par td{
+  background-color:#B1BFD4; /* Color11*/
+}
+
+.td{
+  padding:5px;  
+}
+
+a{
+/*   text-decoration:none; */
+  font-weight:bold;
+  color:#3A4B64; /* Color3 */
+}
+
+fieldset{
+    border:solid 1px #A4A4A4;  /* Color10 */
+    background-color:white;
+}
+
+legend{
+  font-weight:bold;
+  font-size:13px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-left:12px;
+  
+}
+input{
+  color: #262626; /* Color2*/
+  padding:2px;
+  border: 1px solid #B1BFD4; /* Color11*/
+  border-radius:3px; 
+}
+
+input:hover{
+    border: 1px solid #3A4B64; /* Color3*/
+}
+
+li{
+    color: #262626; /* Color2*/
+  
+}
+
+
+
+
+
+
