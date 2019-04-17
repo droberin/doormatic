@@ -4,3 +4,4 @@ door/config/email.inc.php
 *~
 *.phps
 .idea/
+venv/
