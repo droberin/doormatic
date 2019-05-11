@@ -8,11 +8,11 @@ import logging
 
 # Reconnect WAN Script.
 
-#if ping('8.8.8.8', 30):
-#    logging.info("WAN seems to be properly connected")
-#    exit(0)
-#else:
-#    logging.critical("WAN may be failing... Let's try reconnecting external interface")
+if ping('8.8.8.8', 30):
+    logging.info("WAN seems to be properly connected")
+    exit(0)
+else:
+    logging.critical("WAN may be failing... Let's try reconnecting external interface")
 
 configuration_file_path = environ.get('CONFIGURATION_FILE', 'configuration.yaml')
 
@@ -53,7 +53,6 @@ except KeyError as e:
 if 'stok' in stok_rev:
     configuration['stok'] = stok_rev['stok']
 
-pass
 reconnect = reconnecter.get(
     '{}://{}/cgi-bin/luci/;stok={}/admin/network/iface_reconnect/wan?_={}'.format(
         configuration["schema"], configuration["server"], configuration["stok"], configuration["wan"]
