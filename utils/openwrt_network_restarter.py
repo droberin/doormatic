@@ -45,7 +45,7 @@ stok_rev = {}
 try:
     stok_rev = reconnecter.cookies._cookies[configuration["server"]]['/cgi-bin/luci/']['sysauth']._rest
 except KeyError as e:
-    print(f'Key error: {e}')
+    print('Key error: {}'.format(e))
     pass
 
 if 'stok' in stok_rev:
