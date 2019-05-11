@@ -33,17 +33,17 @@ configuration = {
 
 reconnecter = requests.Session()
 reconnecter.post(
-    f'{configuration["schema"]}://{configuration["server"]}/cgi-bin/luci',
+    '{}://{}/cgi-bin/luci'.format(configuration["schema"], configuration["server"]),
     data={
-        'username': f'{configuration["username"]}',
-        'password': f'{configuration["password"]}'
+        'username': configuration["username"],
+        'password': configuration["password"],
     }
 )
 
 stok_rev = {}
 
 try:
-    stok_rev = reconnecter.cookies._cookies[f'{configuration["server"]}']['/cgi-bin/luci/']['sysauth']._rest
+    stok_rev = reconnecter.cookies._cookies[configuration["server"]]['/cgi-bin/luci/']['sysauth']._rest
 except KeyError as e:
     print(f'Key error: {e}')
     pass
@@ -53,12 +53,18 @@ if 'stok' in stok_rev:
 
 pass
 reconnect = reconnecter.get(
-    f'{configuration["schema"]}://{configuration["server"]}/cgi-bin/luci/;stok={configuration["stok"]}'
-    f'/admin/network/iface_reconnect/wan?_={configuration["wan"]}'
+    '{}://{}/cgi-bin/luci/;stok={}/admin/network/iface_reconnect/wan?_={}'.format(
+        configuration["schema"], configuration["server"], configuration["stok"], configuration["wan"]
+    )
 )
 if reconnect.status_code == 200:
     print("Interface reconnection properly requested...")
 
 print("Trying to logout before leaving :)")
 reconnecter.get(
-    f'{configuration["schema"]}://{configuration["server"]}/cgi-bin/luci/;stok={configuration["stok"]}/admin/logout')
+    '{}://{}/cgi-bin/luci/;stok={}/admin/logout'.format(
+        configuration["schema"],
+        configuration["server"],
+        configuration["stok"]
+    )
+)
