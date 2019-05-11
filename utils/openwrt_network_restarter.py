@@ -16,7 +16,7 @@ else:
 configuration_file_path = environ.get('CONFIGURATION_FILE', 'configuration.yaml')
 
 if not isfile(configuration_file_path):
-    print(f'[CRITICAL]: Configuration file not found in {configuration_file_path}')
+    print('[CRITICAL]: Configuration file not found in {}'.format(configuration_file_path))
     exit(1)
 
 with open(configuration_file_path, 'rb') as auth_data_file_handler:
