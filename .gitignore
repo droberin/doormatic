@@ -3,3 +3,6 @@ door/config/email.inc.php
 .htpasswd
 *~
 *.phps
+.idea/
+venv/
+utils/configuration.yaml
